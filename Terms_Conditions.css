@@ -1,0 +1,25 @@
+* {
+    font-family: "poppins";
+}
+
+.navbar {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scrolled {
+  background-color:#207272 !important;
+}
+
+.button {
+  background-color: #083535;
+}
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+  background: lightgray;
+}
+::-webkit-scrollbar-thumb{
+  background: #207272;
+  border-radius: 10px;
+}

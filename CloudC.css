@@ -1,0 +1,59 @@
+*{
+    font-family: "poppins";
+}
+.navbar {
+   transition: background-color 0.3s, color 0.3s;
+}
+
+.scrolled {
+    background-color:#207272 !important;
+}
+
+.button {
+    background-color: #083535;
+}
+
+.backGround{
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3K1vVo9J4WTv5_oNFtQQxXFU8LMpfupCag&s");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.content{
+    background-color: rgba(0,0,0,0.5);
+}
+.star {
+    color: gold;
+}
+.btn1 {
+    background-color: #207272;
+}
+.con_right{
+    background-color: #c8e0ca;
+}
+/* Responsive adjustments for con_right */
+@media (max-width: 768px) {
+    .con_right {
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: 100%; /* Take full width on smaller screens */
+    }
+
+    .video {
+        width: 100%; /* Full width for video on smaller screens */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        align-items: center; /* Center buttons vertically */
+    }
+}::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: lightgray;
+}
+::-webkit-scrollbar-thumb{
+    background: #207272;
+    border-radius: 10px;
+}
+

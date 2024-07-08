@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    transition: background-color 0.3s, color 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #c8e0ca;
+}
+.scrolled {
+    background-color:#207272 !important;
+  }
+  
+.button {
+    background-color: #083535;
+ }
+.contain h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 30px;
+    max-width: 400px;
+    font-size: 25px;
+    text-align: left;
+    line-height: 34px;
+    text-transform: capitalize;
+    color: #DF8D2A;
+    margin-left: auto;
+}
+
+.contain h3 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    max-width: 400px;
+    font-size: 14px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #DF8D2A;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: lightgray;
+}
+::-webkit-scrollbar-thumb{
+    background: #207272;
+    border-radius: 10px;
+}

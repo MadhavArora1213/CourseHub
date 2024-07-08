@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+   <!-- font cdn -->
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+<!-- icon cdn -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+<!-- custom Css -->
+<link rel="website icon" type="png" href="Images/CourseHub__1_-removebg-preview.png">
+    <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>CourseHub</title>
+  </head>
+  <body class="bg-gray-100 selection:bg-black selection:text-white">
+
+    <!-- Navbar -->
+  
+    <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 bg-black text-white h-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#"><img src="Images/CourseHub__1_-removebg-preview.png" alt=""  height="80px" width="80px" /></a>
+            <a href="#">
+              <h1 class="head text-3xl max-lg:hidden">CourseHub</h1>
+            </a>
+          </div>
+          <div class="hidden md:flex space-x-8 items-center">
+            <a href="Home.html" class="list  hover:text-gray-300">Home</a>
+            <a href="Courses.html" class="list hover:text-gray-300">Courses</a>
+            <a href="internship.html" class="list hover:text-gray-300">Internship</a>
+            <a href="PAP.html" class="list hover:text-gray-300">PAP</a>
+            <a href="Career_Services.html" class="list hover:text-gray-300">Career Services</a>
+            <a href="login.html"
+              class="active px-4 py-2 border border-white rounded-xl hover:bg-white hover:text-black transition">Login</a>
+            <a href="login.html" class="active button px-4 py-2 text-white rounded-xl hover: transition">Sign Up</a>
+          </div>
+          <div class="flex items-center md:hidden">
+            <button id="menu-btn" class="text-white focus:outline-none">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- In- Mobile view -->
+  
+      <div id="mobile-menu" class="md:hidden bg-black text-white absolute top-20 inset-x-0 hidden">
+        <a href="Home.html" class="list  block text-white px-11 py-2">Home</a>
+        <a href="Courses.html" class="list block text-white px-11 py-2">Courses</a>
+        <a href="internship.html" class="list block text-white px-11 py-2">Internship</a>
+        <a href="PAP.html" class="list block text-white px-11 py-2">PAP</a>
+        <a href="Career_Services.html" class="list block text-white px-11 py-2">Career Services</a>
+        <a href="login.html" class="active block text-white px-11 py-2">Login</a>
+        <a href="login.html" class="active block text-white px-11 py-2">Sign Up</a>
+      </div>
+    </nav>
+
+<!-- Form Section -->
+
+    <div class="containers mt-10">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              "Join our community! Sign up now to stay updated with the latest
+              news, exclusive offers, and personalized content just for you."
+            </p>
+
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+          <img src="Images/Software code testing-amico.svg" class="image rocket" alt=""/>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              "Welcome back! Please log in to access your account and continue
+              where you left off."
+            </p>
+
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+          <img
+            src="Images/Security On-amico.svg"
+            class="image"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section -->
+
+    <footer class="bg-black text-white w-full py-10">
+      <div class="container  px-5 md:px-10">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="w-full md:w-1/3 mb-10 md:mb-0">
+            <img src="Images/CourseHub__1_-removebg-preview.png" alt="" class="w-24 ">
+            <p class="text-sm md:text-[12px] ">
+              CourseHub offers comprehensive development programs designed to elevate students into high-demand roles
+              through our extensive network of over 300 corporate partners. Our customized approach guarantees that
+              you're not just equipped with the skills you need, but fully prepared to excel in your chosen career path.
+            </p>
+          </div>
+          <div class="w-full md:w-1/4 mb-10 ml-0 md:mb-0 md:ml-4">
+            <h1 class="text-2xl font-bold mb-4">GET HELP</h1>
+            <ul class="leading-8">
+              <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
+              <li><a href="Terms_Conditions.html">Terms and Conditions</a></li>
+              <li><a href="PAP.html">Pay After Placements</a></li>
+              <li><a href="Career_Services.html">Career</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="https://novoresume.com/career-blog/ats-friendly-resume-templates">Cv Builder</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-10 md:mb-0">
+            <h1 class="text-2xl font-bold mb-4">PROGRAMS</h1>
+            <ul class="leading-8">
+              <li><a href="Data_S.html">Data Science</a></li>
+              <li><a href="webD.html">Full Stack Development</a></li>
+              <li><a href="CyberSecurity.html">Cyber Security</a></li>
+              <li><a href="UI.html">Ui/Ux</a></li>
+              <li><a href="Courses.html">Many More</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-10 md:mb-0">
+            <h1 class="text-2xl font-bold mb-4">CONTACT US</h1>
+            <p class="text-[14px]">Tel: +91 79730 66831, +91 98772 75894</p>
+            <p class="text-[14px]">Mail: coursehub100@gmail.com</p>
+            <div class="flex mt-4">
+              <a href="https://youtube.com/@madhavarora9267?si=ud8udA9iLkTAtZqy" target="_blank"><i
+                  class="ri-youtube-line text-4xl"></i></a>
+              <a href="https://www.linkedin.com/in/madhav-arora-32b056254/" target="_blank"><i
+                  class="ri-linkedin-box-line text-4xl"></i></a>
+              <a href="https://www.instagram.com/virdi_akash?utm_source=qr&igsh=MWNvdDMxdzlscjVsNw==" target="_blank"><i
+                  class="ri-instagram-line text-4xl"></i></a>
+              <a href=""><i class="ri-facebook-box-line text-4xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.165.0/three.module.js"
+      integrity="sha512-Y18NM4/HlOrqWDxpoxC1/TyZkYUvVLe4uxrZXBSXWil6/Ye3XCQecKYWYUmqj8weQcQnblaYxroeGEfAcN5hig=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="Login.js"></script>
+  </body>
+</html>

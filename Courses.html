@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CourseHub</title>
+
+  <!-- Font cdn -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"/>
+
+  <!-- remix icon -->
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+<!-- swiper cdn -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- custom css -->
+    <link rel="website icon" type="png" href="Images/CourseHub__1_-removebg-preview.png">
+  <link rel="stylesheet" href="Courses.css" />
+  <link rel="stylesheet" href="./output.css" />
+</head>
+
+<!-- body -->
+
+<body class="bg-gray-100 selection:bg-black selection:text-white">
+
+  <!-- Navbar -->
+
+  <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 bg-black text-white h-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="#"><img src="Images/CourseHub__1_-removebg-preview.png" alt=""  height="80px" width="80px" /></a>
+          <a href="#">
+            <h1 class="head text-3xl max-lg:hidden">CourseHub</h1>
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="Home.html" class="list  hover:text-gray-300">Home</a>
+          <a href="Courses.html" class="list active hover:text-gray-300">Courses</a>
+          <a href="internship.html" class="list hover:text-gray-300">Internship</a>
+          <a href="PAP.html" class="list hover:text-gray-300">PAP</a>
+          <a href="Career_Services.html" class="list hover:text-gray-300">Career Services</a>
+          <a href="login.html"
+            class="px-4 py-2 border border-white rounded-xl hover:bg-white hover:text-black transition">Login</a>
+          <a href="login.html" class=" button px-4 py-2 text-white rounded-xl hover: transition">Sign Up</a>
+        </div>
+        <div class="flex items-center md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- In- Mobile view -->
+
+    <div id="mobile-menu" class="md:hidden bg-black text-white absolute top-20 inset-x-0 hidden  lg:w-full">
+      <a href="Home.html" class="list  block text-white px-11 py-2">Home</a>
+      <a href="Courses.html" class="list active block text-white px-11 py-2">Courses</a>
+      <a href="internship.html" class="list block text-white px-11 py-2">Internship</a>
+      <a href="PAP.html" class="list block text-white px-11 py-2">PAP</a>
+      <a href="Career_Services.html" class="list block text-white px-11 py-2">Career Services</a>
+      <a href="login.html" class=" block text-white px-11 py-2">Login</a>
+      <a href="login.html" class=" block text-white px-11 py-2">Sign Up</a>
+    </div>
+  </nav>
+  <!-- search bar and counter -->
+
+  <main class="mt-[70px]">
+    <div class="relative h-auto">
+      <div class="video-container">
+        <video autoplay muted loop class="absolute inset-0 object-cover w-full h-full z-[-1]">
+          <source src="Videos/Courses_video.mp4" type="video/mp4" />
+      </video>
+      </div>
+
+      <!-- Counter  -->
+
+        <section class="text-white bg-[rgba(0,0,0,0.1)] py-12 mt-30">
+            <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-4">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold counter-numbers" data-target="28725">0</h2>
+                    <p class="text-lg">Students Enrolled</p>
+                </div>
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold counter-numbers" data-target="5000">0</h2>
+                    <p class="text-lg">Students Placed</p>
+                </div>
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold counter-numbers" data-target="626">0</h2>
+                    <p class="text-lg">Industry Experts</p>
+                </div>
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold counter-numbers" data-target="256">0</h2>
+                    <p class="text-lg">Corporate Partners</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search bar -->
+        <div class="flex justify-center mt-10 px-4">
+            <div class="searchBar flex w-full sm:w-[35rem] h-[8vh] rounded-xl bg-white">
+              <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search for course"
+              onkeyup="search()"
+              autocomplete="off"
+              class="w-full sm:w-5/6 md:w-full border-none bg-transparent px-4 py-2 text-gray-900 focus:outline-none"
+            />
+            <div id="suggestions" class="suggestions-box"></div>
+            
+              
+                <button class="rounded-xl px-4 py-2 text-white bg-[#207272]">Search</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+  <!-- Code for Cards -->
+    <!-- Conatiner of boxes -->
+    <div class="boxer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:mt-[10px] md:mt-[4vh] lg:mt-[16vh] mx-4 lg:mx-11">
+      <!-- Card_1  -->
+      <div class="boxes boxA h-[75vh] w-[20vw]  mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxA1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxA2 h-[50%] w-auto p-3 ">
+          <h1 class="text-xl font-bold">UI/UX FUNDAMENTAL</h1>
+          <p class="">
+            Unlock the essentials of user interface (UI) and user experience
+            (UX) design with this comprehensive course.
+          </p>
+          <a href="UI.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_2  -->
+      <div class="boxes boxB h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxB1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxB2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">DATA SCIENCE</h1>
+          <p>
+            Data science is a multi- disciplinary approach to gaining insights
+            from an increasing amount of data
+          </p>
+          <a href="Data_S.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_3  -->
+      <div class="boxes boxC h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxC1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxC2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">FULL STACK</h1>
+          <p>
+            Full stack development involves building both front-end and back-end
+            parts of a web application.
+          </p>
+          <a href="webD.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0 "
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_4  -->
+      <div class="boxes boxD h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxD1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxD2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">FRONTEND</h1>
+          <p>
+            Frontend development focuses on creating the user interface and
+            experience of a website or application.
+          </p>
+          <a href="FrontEnd.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_5  -->
+      <div class="boxes boxE h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxE1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxE2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">BACKEND</h1>
+          <p>
+            Backend involves server-side logic, database management, and
+            handling data security
+          </p>
+          <a href="Backend.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_6  -->
+      <div class="boxes boxF h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxF1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxF2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">CLOUD COMPUTING</h1>
+          <p>
+            Cloud computing provides on-demand access to computing resources, storage, and services online.
+          </p>
+          <a href="CloudC.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_7  -->
+      <div class="boxes boxG h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxG1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxG2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">PYTHON</h1>
+          <p>
+            Python is a versatile, high-level programming language known for its readability and simplicity.
+          </p>
+          <a href="python.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_8  -->
+      <div class="boxes boxH h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxH1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxH2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">AI</h1>
+          <p>
+            Artificial intelligence simulates human intelligence using algorithms for decision-making.
+          </p>
+          <a href="AI.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_9  -->
+      <div class="boxes boxI h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxI1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxI2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">ML</h1>
+          <p>
+            Machine learning empowers computers to learn patterns from data for predictive insights
+          </p>
+         <a href="ml.html"><button
+          class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+        >
+          View More
+        </button></a> 
+        </div>
+      </div>
+      <!-- Card_10  -->
+      <div class="boxes boxJ h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxJ1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxJ2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">DIGITAL MARKETING</h1>
+          <p>
+            Digital marketing utilizes online channels to reach and engage targeted audiences effectively.
+          </p>
+          <a href="DM.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_11  -->
+      <div class="boxes boxK h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxK1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxK2_2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">JAVA SCRIPT</h1>
+          <p>
+            JavaScript makes websites interactive with dynamic elements like animations and user interactions.
+          </p>
+          <a href="java_S.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_12  -->
+      <div class="boxes boxL h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxL1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxL2_2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">CYBER SECURITY</h1>
+          <p>
+            Cyber security protects digital systems from unauthorized access, attacks, and data breaches.
+          </p>
+          <a href="CyberSecurity.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_13   -->
+      <div class="boxes boxM h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxM1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxM2_2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">OPERATING SYSTEM</h1>
+          <p>
+            Operating systems manage computer resources and enable user interaction with software applications.
+          </p>
+          <a href="OS.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>
+      <!-- Card_14   -->
+      <div class="boxes boxN h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxN1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxN2_2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">PD</h1>
+          <p>
+            Personality development courses enhance social skills and confidence for personal and professional growth.
+          </p>
+         <a href="PD.html"><button
+          class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+        >
+          View More
+        </button></a> 
+        </div>
+      </div> 
+      <!-- Card_15   -->
+      <div class="boxes boxO h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxO1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxO2_2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">APTITUDE</h1>
+          <p>
+            Aptitude courses improve logical and problem-solving skills for academic and career success.
+          </p>
+          <a href="Aptitude.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>  
+      <!-- Card_16 -->
+      <div class="boxes boxP h-[75vh] w-[20vw] mt-12 rounded-2xl shadow-2xl p-2 max-sm:w-[90vw] max-lg:w-[45vw] max-xl:w-[30vw]">
+        <div class="boxP1 h-[50%] w-auto rounded-2xl"></div>
+        <div class="boxP2_2 h-[50%] w-auto p-3">
+          <h1 class="text-xl font-bold">DSA</h1>
+          <p>
+            Data structures and algorithms optimize how data is stored and processed efficiently.
+          </p>
+          <a href="DSA.html"><button
+            class="ml-11 mt-3 h-[35px] w-[130px] border-2 border-black rounded-2xl max-sm:ml-0 max-lg:ml-0"
+          >
+            View More
+          </button></a>
+        </div>
+      </div>  
+    </div>
+
+<!-- slider -->
+
+    <div class="slider mt-12">
+      <p class="instructor text-center text-4xl font-bold pt-8 text-white">OUR INSTRUCTORS</p>
+      <section class="section ">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonialBox p-4 md:p-6">
+                <img src="Images/right-quote.png" alt="" class="quote mx-auto">
+                <div class="content mt-4">
+                  <p class="text-sm sm:text-base">
+                    Mr. Kevin, the Full Stack instructor on CourseHub, is dedicated to teaching comprehensive web development skills. With extensive industry experience and a passion for coding, he equips students with the knowledge and practical abilities needed to excel in both front-end and back-end development, fostering a new generation of proficient developers.
+                  </p>
+                  <div class="details mt-4">
+                    <div class="imgbx mx-auto">
+                      <img src="Images/Ins_1.webp" alt="" class="rounded-full w-20 h-20 object-cover">
+                    </div>
+                    <h3 class="text-base font-bold mt-2">Kevin<br><span>Full stack</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox p-4 md:p-6">
+                <img src="Images/right-quote.png" alt="" class="quote mx-auto">
+                <div class="content mt-4">
+                  <p class="text-sm sm:text-base">
+                    Ms. Olivia, an esteemed Cyber Security instructor on CourseHub Platform, brings a wealth of industry experience and knowledge to her engaging and practical teaching approach. With a focus on practical skills and cutting-edge techniques, she equips students to navigate and defend against modern cyber threats, fostering a secure digital landscape.
+                  </p>
+                  <div class="details mt-4">
+                    <div class="imgbx mx-auto">
+                      <img src="Images/Ins_2.jpg" alt="" class="rounded-full w-20 h-20 object-cover">
+                    </div>
+                    <h3 class="text-base font-bold mt-2">Olivia<br><span>Cyber Security</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox p-4 md:p-6">
+                <img src="Images/right-quote.png" alt="" class="quote mx-auto">
+                <div class="content mt-4">
+                  <p class="text-sm sm:text-base">
+                    Mr. John, an esteemed instructor on CourseHub Platform specializing in Data Science, brings extensive industry experience and academic rigor to his teaching. His dynamic approach blends theoretical knowledge with practical applications, fostering a deep understanding of data analysis, machine learning, and statistical modeling among his students.
+                  </p>
+                  <div class="details mt-4">
+                    <div class="imgbx mx-auto">
+                      <img src="Images/Ins_3.jpg" alt="" class="rounded-full w-20 h-20 object-cover">
+                    </div>
+                    <h3 class="text-base font-bold mt-2">John<br><span>Data Science</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonialBox p-4 md:p-6">
+                <img src="Images/right-quote.png" alt="" class="quote mx-auto">
+                <div class="content mt-4">
+                  <p class="text-sm sm:text-base">
+                    Ms. Emma, the esteemed AI and ML instructor on CourseHub, is renowned for her expertise and engaging teaching style. With a deep passion for emerging technologies, she empowers learners to master complex concepts, fostering a comprehensive understanding of artificial intelligence and machine learning. Her dedication and guidance inspire students to excel.
+                  </p>
+                  <div class="details mt-4">
+                    <div class="imgbx mx-auto">
+                      <img src="Images/Ins_4.jpg" alt="" class="rounded-full w-20 h-20 object-cover">
+                    </div>
+                    <h3 class="text-base font-bold mt-2">Emma<br><span>AI and ML</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>  
+    </div>
+
+    <!-- This is for Students -->
+
+     <div class="students mt-10">
+      <p class="mt-20 p-4 text-5xl font-bold">Hear directly from our students</p>
+       <div class="container">
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">Joined CourseHub for semester training in January, swiftly placed at Bellboy as a backend engineer in Python with a 5 LPA package. Improved coding and problem- solving skills significantly with their through guidance and training.</p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_1.jpg" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold">ADITYA SHARMA</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">Placed at Virtuos Digital via CourseHub. Transitioned from tech novice to adept with insights into corporate culture. Grateful for guidance from teachers and placement coordinators, fostering a valuable learning journey.</p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_2.jpg" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold">LOVNEET KAUR</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">Placed in Dubai startup, 5 LPA as backend engineer. Grateful to CourseHub via college for training, support, and preparation. Their guidance aligned me with industry demands, aiding in the pursuit of my dreams.</p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_3.jpg " alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold"> POONAM SALIYA</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">Joining CourseHub for cyber security training was pivotal. The supportive environment, dedicated placement team, and excellent teachers facilitated my journey to a job at Cyber Assure Company. Grateful for the growth, friendships, and opportunities gained.
+              </p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_4.jpeg.jpg" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold">
+                    SIMRAN SINGH</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">Thrilled to join Protiviti, thanks to CourseHub' fantastic support. The journey was challenging, but their assistance and opportunities for growth were invaluable. Grateful to family, teachers, and friends. Excited and determined for this new career chapter.</p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_5.png" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold">AMRITPAL SINGH</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">CourseHub dedicated efforts and comprehensive job assistance program transformed me from a hopeful job seeker to a proud employee. Their personalized approach, insightful counseling, and invaluable support led to securing my first job and equipped me for future career success.</p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_6.jpg" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold">KHUSHPREET KAUR</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">
+                CourseHub played a crucial role in securing my first job, providing unwavering support, essential skills, and invaluable guidance. Their exceptional job placement assistance led me to a role aligned with my aspirations, illuminating my path to succes</p>
+                <div class="stu-info flex absolute bottom-6">
+                  <div>
+                    <img src="Images/Stu_7.jpg" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                  </div>
+                  <div class="ml-2"> 
+                    <p class="text-sm font-bold">SUMIT VERMA</p>
+                    <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                  </div>
+                </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">
+                Being a recent Computer Science graduate from Jaypee University, MP,I faced job challenges post-college. Enrolling in CourseHub for personal development and placement training, I swiftly secured a System Developer role at Data Resolve, grateful for their transformative assistance in my professional journey</p>
+                <div class="stu-info flex absolute bottom-6">
+                  <div>
+                    <img src="Images/Stu_8.png" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                  </div>
+                  <div class="ml-2"> 
+                    <p class="text-sm font-bold">SAURABH PAL</p>
+                    <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                  </div>
+                </div>
+             </div>
+           </div>
+         </div>
+         <div class="card">
+           <div class="box">
+             <div class="content p-4">
+              <h2 class="text-xl font-bold"><i class="ri-double-quotes-l"></i></h2>
+              <p class="text-[15px]">Joined CourseHub for semester training in January, swiftly placed at Bellboy as a Frontend engineer with a 5 LPA package. Improved coding and problem- solving skills significantly with their through guidance and training.</p>
+              <div class="stu-info flex absolute bottom-6">
+                <div>
+                  <img src="Images/Stu_10.webp" alt="" class="rounded-full w-16 h-16 md:w-12 md:h-12 sm:w-8 sm:h-8">
+                </div>
+                <div class="ml-2"> 
+                  <p class="text-sm font-bold">SIMRAN PREET</p>
+                  <p><i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i>  <i class="ri-star-fill"></i></p>
+                </div>
+              </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     
+     <!-- Footer -->
+
+     <footer class="bg-black text-white w-full py-10">
+      <div class="container  px-5 md:px-10">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="w-full md:w-1/3 mb-10 md:mb-0">
+            <img src="Images/CourseHub__1_-removebg-preview.png" alt="" class="w-24 ">
+            <p class="text-sm md:text-[12px] ">
+              CourseHub offers comprehensive development programs designed to elevate students into high-demand roles
+              through our extensive network of over 300 corporate partners. Our customized approach guarantees that
+              you're not just equipped with the skills you need, but fully prepared to excel in your chosen career path.
+            </p>
+          </div>
+          <div class="w-full md:w-1/4 mb-10 ml-0 md:mb-0 md:ml-4">
+            <h1 class="text-2xl font-bold mb-4">GET HELP</h1>
+            <ul class="leading-8">
+              <li><a href="Privacy_Policy.html">Privacy Policy</a></li>
+              <li><a href="Terms_Conditions.html">Terms and Conditions</a></li>
+              <li><a href="PAP.html">Pay After Placements</a></li>
+              <li><a href="Career_Services.html">Career</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="https://novoresume.com/career-blog/ats-friendly-resume-templates">Cv Builder</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-10 md:mb-0">
+            <h1 class="text-2xl font-bold mb-4">PROGRAMS</h1>
+            <ul class="leading-8">
+              <li><a href="Data_S.html">Data Science</a></li>
+              <li><a href="webD.html">Full Stack Development</a></li>
+              <li><a href="CyberSecurity.html">Cyber Security</a></li>
+              <li><a href="UI.html">Ui/Ux</a></li>
+              <li><a href="Courses.html">Many More</a></li>
+            </ul>
+          </div>
+          <div class="w-full md:w-1/4 mb-10 md:mb-0">
+            <h1 class="text-2xl font-bold mb-4">CONTACT US</h1>
+            <p class="text-[14px]">Tel: +91 79730 66831, +91 98772 75894</p>
+            <p class="text-[14px]">Mail: coursehub100@gmail.com</p>
+            <div class="flex mt-4">
+              <a href="https://youtube.com/@madhavarora9267?si=ud8udA9iLkTAtZqy" target="_blank"><i
+                  class="ri-youtube-line text-4xl"></i></a>
+              <a href="https://www.linkedin.com/in/madhav-arora-32b056254/" target="_blank"><i
+                  class="ri-linkedin-box-line text-4xl"></i></a>
+              <a href="https://www.instagram.com/virdi_akash?utm_source=qr&igsh=MWNvdDMxdzlscjVsNw==" target="_blank"><i
+                  class="ri-instagram-line text-4xl"></i></a>
+              <a href=""><i class="ri-facebook-box-line text-4xl"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- shery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.165.0/three.module.js"
+      integrity="sha512-Y18NM4/HlOrqWDxpoxC1/TyZkYUvVLe4uxrZXBSXWil6/Ye3XCQecKYWYUmqj8weQcQnblaYxroeGEfAcN5hig=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+<!-- Swiper js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom js -->
+  <script src="Courses.js"></script>
+</body>
+</html>

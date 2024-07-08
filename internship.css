@@ -1,0 +1,829 @@
+*{
+  font-family: "poppins";
+}
+.navbar {
+ transition: background-color 0.3s, color 0.3s;
+}
+.navbar a:hover,
+.navbar a.active {*{
+    font-family: "poppins";
+}
+.navbar {
+   transition: background-color 0.3s, color 0.3s;
+}
+
+
+.navbar a:hover,
+.navbar a.active {
+    color: #c8e0ca;
+}
+.scrolled {
+  background-color:#207272 !important;
+}
+
+.button {
+  background-color: #083535;
+}
+/* Add this CSS to your style.css or within a <style> tag in your HTML */
+
+@media (max-width: 768px) {
+   /* For mobile view */
+   main {
+     height: 100vh; /* Ensure the main section covers the full viewport height */
+   }
+ 
+   main video {
+     height: 80vh;
+     width: auto;
+     object-fit: cover;
+   }
+ }
+
+ @media (max-width: 420px) {
+  /* For mobile view */
+  
+  main video {
+    height: 80vh;
+    min-width: 100vw;
+    object-fit: cover;
+  }
+}
+ .searchBar button{
+  background-color: #207272;
+ }
+ .boxA1{
+  background-image: url("https://imgs.search.brave.com/UPYwcU8xTbB3tv20JClcITlfq5Rf5a9ui2yTngtl_AY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzIxNDg0/My9zY3JlZW5zaG90/cy84MTA4NDAvbWVk/aWEvNmJhMzFhOGVk/ODVlNjJkNmI1YjUx/Njc4YThmZmJhMmQu/anBnP3Jlc2l6ZT00/MDB4MA");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+}
+.boxB1{
+  background-image: url("DS_IMG.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+.boxC1{
+  background-image: url("FSD_IMG.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxD1{
+  background-image: url("https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040416.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxE1{
+  background-image: url("https://media.istockphoto.com/id/1292214467/photo/backend-development-concept-for-programming-on-laptop-display.webp?b=1&s=170667a&w=0&k=20&c=tmkWts1L6T1_9_fmNMZUEo1qZnuoNnkdC1afVGkT3uk=");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxF1{
+  background-image: url("https://thumbs.dreamstime.com/b/cloud-computing-28742155.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxG1{
+  background-image: url("https://imgs.search.brave.com/NrnGeq0q6HWq6EX8sId6qUr_93r2CGgKDqlq-Ei7hic/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/MjcyOTgzNS9waG90/by9wcm9ncmFtbWlu/Zy1sYW5ndWFnZS1w/eXRob24td2l0aC1h/LTUtc3Rhci1yYXRp/bmctYW5kLWNvZGUt/ZWxlbW1ldHMtYmFk/Z2VzLTNkLndlYnA_/Yj0xJnM9MTcwNjY3/YSZ3PTAmaz0yMCZj/PW9RMW0xZEFJOU1R/N2JaR1A0WjdHMGh0/bGZpR3A3WWY5Smha/RFA4RDlsY1E9");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxH1{
+  background-image: url("https://img.freepik.com/premium-photo/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata-machine-learning-ai-with-digit_937196-72.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxI1{
+  background-image: url("https://imgs.search.brave.com/xXZVMBk-pieZz8S8BxddLzmCfFgL8LcdqMVL__JovzY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mdXNl/bGFiY3JlYXRpdmUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzA5L2NvdmVy/My5qcGc");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxJ1{
+  background-image: url("https://wallpapercave.com/wp/wp3950105.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.boxK1{
+  background-image: url("https://media.istockphoto.com/id/1284271878/photo/javascript-inscription-against-laptop-and-code-background-learn-javascript-programming.webp?b=1&s=170667a&w=0&k=20&c=pNyw5iN2ee3oK5adyRBr9-w1cPh9hkUGGnc5Q4JfyJM=");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+}
+
+.boxL1{
+  background-image: url("https://st5.depositphotos.com/2778263/65570/i/450/depositphotos_655706674-stock-photo-cyber-security-network-protection-cybersecurity.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+.boxM1{
+  background-image: url("https://cdn.shopify.com/s/files/1/0855/1446/files/OS-buddies-1-1024x570.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+}
+.boxN1{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTfdqmLg4Yhh_lQq_jIvMwwtEcxMOCJ43EuQ&s");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+}
+.boxO1{
+  background-image: url("https://play-lh.googleusercontent.com/8HEJdrLd48HwrAzlRva8xjG1wxCuu0VUd9ML6ySw76q-lBD0AeWofbNZqYPrjWSCgf8");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
+}
+.boxP1{
+  background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*4ZcW5tSdizlbtDQyVpRTuA.jpeg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  
+}
+.students{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  backdrop-filter: blur(0px) saturate(180%);
+  -webkit-backdrop-filter: blur(0px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+  
+}
+.container .card{
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+              inset -5px -5px 15px rgba(255,255,255,0.1),
+              5px 5px 15px rgba(0,0,0,0.3),
+              -5px -5px 15px rgba(255,255,255,0.1);
+  border-radius: 15px;
+  margin: 30px;         
+                   
+}
+.container .card .box{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  /* background: #2a2b2f; */
+  border: 2px solid #1e1f23;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: 0.5s;
+  
+}
+.container .card .box:hover{
+  transform: translateY(-50px);
+  box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+  backdrop-filter: blur(0px) saturate(180%);
+  -webkit-backdrop-filter: blur(0px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.stu-info i{
+  color: gold;
+}
+
+/* slider  */
+.slider .instructor{
+  background-color: #3e9a9a;
+}
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #3e9a9a;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  height:450px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  filter: blur(4px);
+  background-color: white;
+  border-radius: 10px;
+}
+.swiper-slide-active {
+  filter: blur(0px);
+  background-color: #fff;
+}
+
+.testimonialBox {
+  border: 1px solid #ddd;
+  /* padding: 5px; */
+  margin: 5px;
+  border-radius: 10px;
+  position: relative;
+}
+.testimonialBox .quote {
+  width: 50px;
+  position: absolute;
+  top: -15px;
+  right: 20px;
+}
+.testimonialBox .content {
+  padding: 20px;
+}
+.testimonialBox .details {
+  display: flex;
+  align-items: center;
+}
+.testimonialBox .imgbx {
+  margin-right: 20px;
+}
+.testimonialBox .imgbx img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.testimonialBox .details h3 p {
+  font-size: 8px;
+  color: #666;
+}
+.testimonialBox .details h3 span {
+  font-size: 12px;
+  color: #666;
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+@media (max-width:768px) {
+  .background {
+      min-height: 135vh;
+  }
+  .swiper-slide {
+      width: 200px;
+      height: 600px;
+
+  }
+
+}
+@media (max-width:640px) {
+  .swiper-slide {
+      width: 200px;
+      height: 450px;
+
+  }
+}
+@media (max-width:400px) {
+  .swiper-slide {
+      width: 200px;
+      height: 450px;
+
+  } 
+  .testimonialBox {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      position: relative;
+  }
+  .testimonialBox .quote {
+      width: 40px;
+      position: absolute;
+      top: -15px;
+      right: 20px;
+  }
+
+  .testimonialBox .details h3 p {
+      font-size: 3px;
+  }
+
+}
+
+@media (max-width:320px) {
+  .section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #2196f3;
+  }
+  .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+  }
+  .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 320px;
+      height: 430px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+      filter: blur(4px);
+      background-color: #d1ebff;
+      border-radius: 10px;
+  }
+  .swiper-slide-active {
+      filter: blur(0px);
+      background-color: #fff;
+  }
+  
+  .testimonialBox {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      position: relative;
+  }
+  .testimonialBox .quote {
+      width: 50px;
+      position: absolute;
+      top: -15px;
+      right: 20px;
+  }
+  .testimonialBox .content {
+      padding: 20px;
+  }
+  .testimonialBox .details {
+      display: flex;
+      align-items: center;
+  }
+  .testimonialBox .imgbx {
+      margin-right: 20px;
+  }
+  .testimonialBox .imgbx img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+  }
+  .testimonialBox  p {
+      font-size: 10px;
+  
+  }
+}
+::-webkit-scrollbar{
+  width: 15px;
+}
+::-webkit-scrollbar-track{
+  background: lightgray;
+}
+::-webkit-scrollbar-thumb{
+  background: #207272;
+  border-radius: 10px;
+}
+.suggestions-box {
+  position: absolute;
+  top: 57vh;
+  background-color: white;
+  border-radius: 12px;
+  /* border: 1px solid #ddd; */
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 44vw; /* Adjust according to your input field's padding */
+}
+.suggestions-box div {
+  padding: 10px;
+  cursor: pointer;
+}
+.suggestions-box div:hover {
+  background-color: #f1f1f1;
+}
+@media (max-width: 950px) {
+  .suggestions-box {
+    /* position: absolute; */
+    top: 54vh;
+    width: auto; /* Adjust according to your input field's padding */
+  }
+}
+@media (max-width: 770px) {
+  .suggestions-box {
+    position: absolute;
+    top: 64vh;
+    width: auto; /* Adjust according to your input field's padding */
+  }
+}
+@media (max-width: 640px) {
+  .suggestions-box {
+    position: absolute;
+    top: 91vh;
+    width: auto; /* Adjust according to your input field's padding */
+  }
+}
+@media (max-width:400px) {
+  .suggestions-box {
+    position: absolute;
+    top: 85vh;
+    width: auto; /* Adjust according to your input field's padding */
+  }
+}
+
+
+    color: #c8e0ca;
+}
+.scrolled {
+background-color:#207272 !important;
+}
+
+.button {
+background-color: #083535;
+}
+/* Add this CSS to your style.css or within a <style> tag in your HTML */
+
+@media (max-width: 768px) {
+ /* For mobile view */
+ main {
+   height: 100vh; /* Ensure the main section covers the full viewport height */
+ }
+
+ main video {
+   height: 80vh;
+   width: auto;
+   object-fit: cover;
+ }
+}
+
+@media (max-width: 420px) {
+/* For mobile view */
+
+main video {
+  height: 80vh;
+  min-width: 100vw;
+  object-fit: cover;
+}
+}
+.searchBar button{
+background-color: #207272;
+}
+.boxA1{
+background-image: url("https://imgs.search.brave.com/UPYwcU8xTbB3tv20JClcITlfq5Rf5a9ui2yTngtl_AY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZHJpYmJibGUuY29t/L3VzZXJzLzIxNDg0/My9zY3JlZW5zaG90/cy84MTA4NDAvbWVk/aWEvNmJhMzFhOGVk/ODVlNjJkNmI1YjUx/Njc4YThmZmJhMmQu/anBnP3Jlc2l6ZT00/MDB4MA");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+
+}
+.boxB1{
+background-image: url("DS_IMG.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+}
+.boxC1{
+background-image: url("FSD_IMG.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxD1{
+background-image: url("https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040416.jpg?size=626&ext=jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxE1{
+background-image: url("https://media.istockphoto.com/id/1292214467/photo/backend-development-concept-for-programming-on-laptop-display.webp?b=1&s=170667a&w=0&k=20&c=tmkWts1L6T1_9_fmNMZUEo1qZnuoNnkdC1afVGkT3uk=");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxF1{
+background-image: url("https://thumbs.dreamstime.com/b/cloud-computing-28742155.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxG1{
+background-image: url("https://imgs.search.brave.com/NrnGeq0q6HWq6EX8sId6qUr_93r2CGgKDqlq-Ei7hic/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/MjcyOTgzNS9waG90/by9wcm9ncmFtbWlu/Zy1sYW5ndWFnZS1w/eXRob24td2l0aC1h/LTUtc3Rhci1yYXRp/bmctYW5kLWNvZGUt/ZWxlbW1ldHMtYmFk/Z2VzLTNkLndlYnA_/Yj0xJnM9MTcwNjY3/YSZ3PTAmaz0yMCZj/PW9RMW0xZEFJOU1R/N2JaR1A0WjdHMGh0/bGZpR3A3WWY5Smha/RFA4RDlsY1E9");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxH1{
+background-image: url("https://img.freepik.com/premium-photo/robotic-artificial-intelligence-technology-smart-lerning-from-bigdata-machine-learning-ai-with-digit_937196-72.jpg?size=626&ext=jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxI1{
+background-image: url("https://imgs.search.brave.com/xXZVMBk-pieZz8S8BxddLzmCfFgL8LcdqMVL__JovzY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9mdXNl/bGFiY3JlYXRpdmUu/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIxLzA5L2NvdmVy/My5qcGc");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxJ1{
+background-image: url("https://wallpapercave.com/wp/wp3950105.png");
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+.boxK1{
+background-image: url("https://media.istockphoto.com/id/1284271878/photo/javascript-inscription-against-laptop-and-code-background-learn-javascript-programming.webp?b=1&s=170667a&w=0&k=20&c=pNyw5iN2ee3oK5adyRBr9-w1cPh9hkUGGnc5Q4JfyJM=");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+
+}
+
+.boxL1{
+background-image: url("https://st5.depositphotos.com/2778263/65570/i/450/depositphotos_655706674-stock-photo-cyber-security-network-protection-cybersecurity.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+.boxM1{
+background-image: url("https://cdn.shopify.com/s/files/1/0855/1446/files/OS-buddies-1-1024x570.jpg");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+
+}
+.boxN1{
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTfdqmLg4Yhh_lQq_jIvMwwtEcxMOCJ43EuQ&s");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+
+}
+.boxO1{
+background-image: url("https://play-lh.googleusercontent.com/8HEJdrLd48HwrAzlRva8xjG1wxCuu0VUd9ML6ySw76q-lBD0AeWofbNZqYPrjWSCgf8");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+
+}
+.boxP1{
+background-image: url("https://miro.medium.com/v2/resize:fit:1400/1*4ZcW5tSdizlbtDQyVpRTuA.jpeg");
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center;
+
+}
+.students{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+min-height: 100vh;
+backdrop-filter: blur(0px) saturate(180%);
+-webkit-backdrop-filter: blur(0px) saturate(180%);
+background-color: rgba(255, 255, 255, 0);
+border-radius: 12px;
+border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+max-width: 1200px;
+margin: 40px 0;
+
+}
+.container .card{
+position: relative;
+min-width: 320px;
+height: 440px;
+box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+            inset -5px -5px 15px rgba(255,255,255,0.1),
+            5px 5px 15px rgba(0,0,0,0.3),
+            -5px -5px 15px rgba(255,255,255,0.1);
+border-radius: 15px;
+margin: 30px;         
+                 
+}
+.container .card .box{
+position: absolute;
+top: 20px;
+left: 20px;
+right: 20px;
+bottom: 20px;
+/* background: #2a2b2f; */
+border: 2px solid #1e1f23;
+border-radius: 15px;
+box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+transition: 0.5s;
+
+}
+.container .card .box:hover{
+transform: translateY(-50px);
+box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+backdrop-filter: blur(0px) saturate(180%);
+-webkit-backdrop-filter: blur(0px) saturate(180%);
+background-color: rgba(255, 255, 255, 0);
+border-radius: 12px;
+border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.stu-info i{
+color: gold;
+}
+
+/* slider  */
+.slider .instructor{
+background-color: #3e9a9a;
+}
+.section {
+position: relative;
+width: 100%;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+background-color: #3e9a9a;
+}
+.swiper {
+width: 100%;
+padding-top: 50px;
+padding-bottom: 50px;
+}
+.swiper-slide {
+background-position: center;
+background-size: cover;
+width: 320px;
+height: 450px;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+filter: blur(4px);
+background-color: white;
+border-radius: 10px;
+}
+.swiper-slide-active {
+filter: blur(0px);
+background-color: #fff;
+}
+
+.testimonialBox {
+border: 1px solid #ddd;
+padding: 15px;
+margin: 10px;
+border-radius: 10px;
+position: relative;
+}
+.testimonialBox .quote {
+width: 50px;
+position: absolute;
+top: -15px;
+right: 20px;
+}
+.testimonialBox .content {
+padding: 20px;
+}
+.testimonialBox .details {
+display: flex;
+align-items: center;
+}
+.testimonialBox .imgbx {
+margin-right: 20px;
+}
+.testimonialBox .imgbx img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+.testimonialBox .details h3 p {
+font-size: 10px;
+color: #666;
+}
+.testimonialBox .details h3 span {
+font-size: 12px;
+color: #666;
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right {
+background-image: none;
+}
+@media (max-width:768px) {
+.background {
+    min-height: 135vh;
+}
+.swiper-slide {
+    width: 200px;
+    height: 600px;
+
+}
+
+}
+@media (max-width:640px) {
+.swiper-slide {
+    width: 200px;
+    height: 450px;
+
+}
+}
+@media (max-width:400px) {
+.swiper-slide {
+    width: 200px;
+    height: 450px;
+
+} 
+.testimonialBox {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.testimonialBox .quote {
+    width: 40px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+
+.testimonialBox .details h3 p {
+    font-size: 3px;
+}
+
+}
+
+@media (max-width:320px) {
+.section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #2196f3;
+}
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    height: 430px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    filter: blur(4px);
+    background-color: #d1ebff;
+    border-radius: 10px;
+}
+.swiper-slide-active {
+    filter: blur(0px);
+    background-color: #fff;
+}
+
+.testimonialBox {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.testimonialBox .quote {
+    width: 50px;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+}
+.testimonialBox .content {
+    padding: 20px;
+}
+.testimonialBox .details {
+    display: flex;
+    align-items: center;
+}
+.testimonialBox .imgbx {
+    margin-right: 20px;
+}
+.testimonialBox .imgbx img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.testimonialBox  p {
+    font-size: 10px;
+
+}
+}
+::-webkit-scrollbar{
+width: 15px;
+}
+::-webkit-scrollbar-track{
+background: lightgray;
+}
+::-webkit-scrollbar-thumb{
+background: #207272;
+border-radius: 10px;
+}
