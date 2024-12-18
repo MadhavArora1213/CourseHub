@@ -621,7 +621,17 @@
          </div>
        </div>
      </div>
-     
+     <!-- Chatbot Icon -->
+    <div id="chatbot-icon">
+      <i class="ri-chat-3-line"></i> <!-- Chat Icon from Remix Icons -->
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window">
+      <iframe
+        src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/17/11/20241117110937-VDEG3AFV.json">
+      </iframe>
+    </div>
      <!-- Footer -->
 
      <footer class="bg-black text-white w-full py-10">
@@ -684,6 +694,20 @@
 <!-- Swiper js -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+      // Toggle chatbot window on icon click
+      const chatbotIcon = document.getElementById('chatbot-icon');
+      const chatbotWindow = document.getElementById('chatbot-window');
+  
+      chatbotIcon.addEventListener('click', () => {
+        if (chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '') {
+          chatbotWindow.style.display = 'block';
+        } else {
+          chatbotWindow.style.display = 'none';
+        }
+      });
+  
+    </script>
     <!-- Custom js -->
   <script src="Courses.js"></script>
 </body>
