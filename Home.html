@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet" />
 
   <!-- splide cdn -->
@@ -31,11 +31,24 @@
   <!-- swiper cdn -->
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script type="text/javascript">
+    // Initialize EmailJS with your user ID
+    (function () {
+      emailjs.init("PRp2ik2SOaxJNAiXt"); // Replace with your EmailJS user ID
+    })();
+  </script>
 
   <!-- Custom Css -->
-<link rel="website icon" type="png" href="Images/CourseHub__1_-removebg-preview.png">
+  <link rel="website icon" type="png" href="Images/CourseHub__1_-removebg-preview.png">
   <link rel="stylesheet" href="Home.css" />
   <link rel="stylesheet" href="./output.css" />
+
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 </head>
 
 <!-- body -->
@@ -48,7 +61,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-20">
         <div class="flex-shrink-0 flex items-center">
-          <a href="#"><img src="Images/CourseHub__1_-removebg-preview.png" alt=""  height="80px" width="80px" /></a>
+          <a href="#"><img src="Images/CourseHub__1_-removebg-preview.png" alt="" height="80px" width="80px" /></a>
           <a href="#">
             <h1 class="head text-3xl max-lg:hidden">CourseHub</h1>
           </a>
@@ -91,9 +104,10 @@
 
   <main class="w-full h-screen relative">
     <!-- left section -->
-    <div class="background w-full h-screen flex flex-col md:flex-row  items-center lg:justify-between px-4 lg:px-16">
-      <div class="left-sec w-full lg:w-2/4 px-4 lg:px-8 mt-20 lg:mt-0 text-center lg:text-left">
-        <h1 class="text-white font-extrabold text-4xl lg:text-7xl w-full leading-snug mt-8 lg:mb-8">
+    <div
+      class="background w-full min-h-screen flex flex-col md:flex-row  items-center lg:justify-between px-4 lg:px-16">
+      <div class="left-sec w-full lg:w-2/4 px-4 lg:px-8 lg:mt-0 text-center lg:text-left">
+        <h1 class="text-white font-extrabold text-4xl lg:text-7xl w-full leading-snug  lg:mb-8">
           Land your dream job in
         </h1>
         <span class="text text-3xl lg:text-5xl text-[#145858] font-extrabold leading-snug"></span>
@@ -112,26 +126,29 @@
 
           <!-- form -->
 
-          <form action="" method="post" class="space-y-0 lg:space-y-4 ">
+
+          <form id="bookingForm" class="space-y-0 lg:space-y-4" onsubmit="sendEmail(event)">
             <div>
               <label for="name" class="block text-[#207272] font-bold">Name</label>
-              <input type="text" name="name" id="name" class="p-2 w-full rounded-lg" />
+              <input type="text" name="name" id="name" class="p-2 w-full rounded-lg" required />
             </div>
             <div>
               <label for="email" class="block text-[#207272] font-bold">Email</label>
-              <input type="email" name="email" id="email" class="p-2 w-full rounded-lg" />
+              <input type="email" name="email" id="email" class="p-2 w-full rounded-lg" required />
             </div>
             <div>
               <label for="number" class="block text-[#207272] font-bold">Phone Number</label>
-              <input type="tel" name="number" id="number" class="p-2 w-full rounded-lg" />
+              <input type="tel" name="number" id="number" class="p-2 w-full rounded-lg" required />
             </div>
             <p class="text-sm">
-              By Clicking Sign Up, You Agree To Our Term & Conditions
+              By Clicking Sign Up, You Agree To Our Terms & Conditions
             </p>
             <button type="submit" class="text-white bg-[#145858] w-full p-3 rounded-lg">
               Submit
             </button>
           </form>
+
+
         </div>
       </div>
     </div>
@@ -475,10 +492,12 @@
         </p>
         <div class="flex flex-col md:flex-row gap-8 lg:gap-28 mt-8 lg:mt-12 justify-center items-center mb-10">
           <div class="w-full md:w-1/2 lg:w-2/5">
-            <video src="Videos/coursehub-ukaumsxc_BvvtVNEy.mp4" type="video/mp4" controls loop class="rounded-3xl w-full"></video>
+            <video src="Videos/coursehub-ukaumsxc_BvvtVNEy.mp4" type="video/mp4" controls loop
+              class="rounded-3xl w-full"></video>
           </div>
           <div class="w-full md:w-1/2 lg:w-2/5 max-sm:hidden">
-            <video src="Videos/coursehub1_TsANc1qQ.mp4" type="video/mp4" controls loop class="rounded-3xl w-full"></video>
+            <video src="Videos/coursehub1_TsANc1qQ.mp4" type="video/mp4" controls loop
+              class="rounded-3xl w-full"></video>
           </div>
         </div>
       </div>
@@ -686,8 +705,9 @@
             charges, ensuring peace of mind.</p>
         </div>
       </div>
-      <a href="PAP.html"><button type="button" class="bts p-4 rounded-3xl mx-auto mt-12 block bg-[#eeffee] border border-purple-50">Find
-        Out?</button></a>
+      <a href="PAP.html"><button type="button"
+          class="bts p-4 rounded-3xl mx-auto mt-12 block bg-[#eeffee] border border-purple-50">Find
+          Out?</button></a>
     </section>
 
     <!-- Resume Builder section -->
@@ -708,7 +728,17 @@
         <a href="https://novoresume.com/career-blog/ats-friendly-resume-templates">Build Your Resume</a>
       </button>
     </section>
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon">
+      <i class="ri-chat-3-line"></i> <!-- Chat Icon from Remix Icons -->
+    </div>
 
+    <!-- Chatbot Window -->
+    <div id="chatbot-window">
+      <iframe
+        src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/17/11/20241117110937-VDEG3AFV.json">
+      </iframe>
+    </div>
     <!-- footer section -->
 
     <footer class="bg-black text-white w-full py-10">
@@ -780,6 +810,62 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
   <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
   <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="text/javascript">
+    function sendEmail(event) {
+      event.preventDefault();
+
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      // Prepare template parameters
+      const templateParams = {
+        to: email,
+        username: name,
+      };
+
+      // Send email using EmailJS
+      emailjs.send("service_26lfb0g", "template_8rh49zy", templateParams)
+        .then(function (response) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Email Sent!',
+            text: 'You are successfully registered for the demo class',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'OK'
+          }).then(() => {
+            setTimeout(() => {
+              location.reload();
+            }, 2000);
+          });
+        }, function (error) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Failed to book a demo class. Please try again.',
+            confirmButtonColor: '#d33',
+            confirmButtonText: 'Try Again'
+          }).then(() => {
+            setTimeout(() => {
+              location.reload();
+            }, 2000);
+          });
+        });
+    }
+
+    // Toggle chatbot window on icon click
+    const chatbotIcon = document.getElementById('chatbot-icon');
+    const chatbotWindow = document.getElementById('chatbot-window');
+
+    chatbotIcon.addEventListener('click', () => {
+      if (chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '') {
+        chatbotWindow.style.display = 'block';
+      } else {
+        chatbotWindow.style.display = 'none';
+      }
+    });
+
+  </script>
 
   <!-- custom javascript -->
   <script src="Home.js"></script>
