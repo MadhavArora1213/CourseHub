@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coursehub</title>
+    <link rel="website icon" type="png" href="Images/CourseHub__1_-removebg-preview.png">
+    <link rel="stylesheet" href="uipayment.css" />
+
+  </head>
+  <body>
+    
+    <div class="container" id="container">
+      <!-- Step 1: User Information Form -->
+      <div id="userInfoSection" class="section active">
+        <h2 style="color: #207272;">Payment Gateway-Introduction To Machine Learning</h2>
+        <form id="userInfoForm" onsubmit="return false;">
+          <label for="fullName" style="color: #207272;">Full Name*</label>
+          <input type="text" id="fullName" required />
+
+          <label for="whatsapp" style="color: #207272;">WhatsApp Number (With ISD)*</label>
+          <input
+            type="text"
+            id="whatsapp"
+            required
+            pattern="^\+[1-9]\d{1,14}$"
+            title="Please enter a valid WhatsApp number with ISD code. Example: +1234567890"
+          />
+
+          <label for="email" style="color: #207272;">Email*</label>
+          <input type="email" id="email" required />
+
+          <!-- Price Field (predefined by the developer) -->
+          <label for="price" style="color: #207272;">Price</label>
+          <input type="text" id="price" value="4500" readonly />
+
+          <button type="button" id="nextBtn" onclick="goToPaymentSection()">
+            Next
+          </button>
+          
+        </form>
+      </div>
+
+      <!-- Step 2: QR Code Payment Section -->
+      <div id="qrSection" class="section">
+        <h2 style="color: #207272;">Payment Gateway-Introduction To Machine Learning</h2>
+        <p style="color: #ff6600;">
+          Scan the QR Code with any UPI App and pay the amount, then proceed to
+          download.
+        </p>
+        <img src="Images/Images/qr.jpg" alt="QR Code" class="qr-code" />
+        <div class="payment-options" style="text-align: center;">
+          <img src="Images/Images/gpay.jpeg" alt="GPay" />
+          <img src="Images/Images/phonepe.avif" alt="PhonePe" />
+          <img src="Images/Images/paytm.jpg" alt="Paytm" />
+          <img src="Images/Images/amazonpay.png" alt="Amazon Pay" />
+        </div>
+        <button id="proceedToDownloadBtn" onclick="goToDownloadSection()">
+          Proceed to Download
+        </button>
+      </div>
+
+      <!-- Step 3: Download Section -->
+      <div id="downloadSection" class="section">
+        <h2 style="color: #207272;">Download Slip</h2>
+        <input
+          type="text"
+          id="transactionId"
+          placeholder="Enter Transaction ID"
+          required
+          pattern="^[A-Za-z0-9]{10,20}$"
+          title="Transaction ID must be alphanumeric and between 10 to 20 characters."
+        />
+        <button id="downloadBtn" onclick="validateAndDownloadSlip()">
+          Download Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Payment Slip Layout -->
+    <div id="paymentSlip" class="payment-slip" style="display: none">
+      <div class="header">
+        <h1 style="color: #207272;">CourseHub</h1>
+        <h2 style="color: #ff6600;">Course Name:Introduction To Machine Learning</h2>
+      </div>
+      <div class="details">
+        <p>
+          <strong style="color: #207272;">Transaction ID:</strong> <span id="slipTransactionId"></span>
+        </p>
+        <p><strong style="color: #207272;">Price:</strong> ₹<span id="slipPrice"></span></p>
+        <p><strong style="color: #207272;">Date:</strong> <span id="slipDate"></span></p>
+      </div>
+      <div class="footer">
+        <p style="color: #207272;">Thank you for your purchase! Happy Learning.</p>
+      </div>
+      <button id="downloadSlipBtn" onclick="downloadReceipt()">
+        Download Receipt
+      </button>
+      <button id="backToCoursesBtn" onclick="goToCoursesPage()">
+        Back to Courses
+      </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      // Show Payment Section after User Info
+      function goToPaymentSection() {
+        const fullName = document.getElementById("fullName").value;
+        const whatsapp = document.getElementById("whatsapp").value;
+        const email = document.getElementById("email").value;
+
+        if (fullName && whatsapp && email) {
+          document.getElementById("userInfoSection").classList.remove("active");
+          document.getElementById("qrSection").classList.add("active");
+        } else {
+          alert("Please fill in all fields correctly.");
+        }
+      }
+
+      // Show Download Section after Payment
+      function goToDownloadSection() {
+        document.getElementById("qrSection").classList.remove("active");
+        document.getElementById("downloadSection").classList.add("active");
+      }
+
+      // Validate Transaction ID and Download Slip
+      function validateAndDownloadSlip() {
+        const transactionId = document.getElementById("transactionId").value;
+        const transactionIdPattern = /^[A-Za-z0-9]{10,20}$/; // Example pattern for validation
+
+        if (transactionIdPattern.test(transactionId)) {
+          const fullName = document.getElementById("fullName").value;
+          const email = document.getElementById("email").value;
+          const pricePaid = "4500"; // Set the price amount as per your logic
+          const date = new Date().toLocaleDateString();
+
+          // Update the payment slip section
+          document.getElementById("slipTransactionId").textContent =
+            transactionId;
+          document.getElementById("slipPrice").textContent = pricePaid;
+          document.getElementById("slipDate").textContent = date;
+
+          // Hide the Download Section and Show the Payment Slip
+          document.getElementById("container").style.display = 'none';
+          document.getElementById("paymentSlip").style.display = "block";
+
+          // Automatically download the receipt
+          downloadReceipt();
+        } else {
+          alert("Please enter a valid Transaction ID.");
+        }
+      }
+
+      // Download Receipt as PDF using jsPDF
+      function downloadReceipt() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Set up the receipt content
+        const courseName = "Introduction To Machine Learning";
+        const transactionId =
+          document.getElementById("slipTransactionId").textContent;
+        const price = document.getElementById("slipPrice").textContent;
+        const date = document.getElementById("slipDate").textContent;
+
+        // Set up the document layout
+        doc.setFont("helvetica");
+        doc.setFontSize(30);
+        
+        doc.text("CourseHub", 20, 20);
+        doc.setFontSize(14);
+        doc.text(`Course Name: ${courseName}`, 20, 40);
+        doc.text(`Transaction ID: ${transactionId}`, 20, 60);
+        doc.text(`Price: ₹${price}`, 20, 80);
+        doc.text(`Date: ${date}`, 20, 100);
+
+        // Add footer message
+        doc.setFontSize(12);
+        doc.text("Thank you for your purchase! Happy Learning.", 20, 120);
+
+        // Save the PDF
+        doc.save("payment_receipt.pdf");
+      }
+
+      // Redirect to Courses page
+      function goToCoursesPage() {
+        window.location.href = "Courses.html";
+      }
+    </script>
+  </body>
+</html>
