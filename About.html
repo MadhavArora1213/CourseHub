@@ -209,7 +209,17 @@
         </p>
       </div>
     </div>
-
+<!-- Chatbot Icon -->
+<div id="chatbot-icon">
+  <i class="ri-chat-3-line"></i> <!-- Chat Icon from Remix Icons -->
+  </div>
+  
+  <!-- Chatbot Window -->
+  <div id="chatbot-window">
+  <iframe
+    src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/17/11/20241117110937-VDEG3AFV.json">
+  </iframe>
+  </div>
     <!-- footer section -->
     <footer class="bg-black text-white w-full py-10">
       <div class="container  px-5 md:px-10">
@@ -267,6 +277,20 @@
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script type="text/javascript">
+      // Toggle chatbot window on icon click
+      const chatbotIcon = document.getElementById('chatbot-icon');
+      const chatbotWindow = document.getElementById('chatbot-window');
+      
+      chatbotIcon.addEventListener('click', () => {
+        if (chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '') {
+          chatbotWindow.style.display = 'block';
+        } else {
+          chatbotWindow.style.display = 'none';
+        }
+      });
+      
+      </script>
     <script src="About.js"></script>
   </body>
 </html>
